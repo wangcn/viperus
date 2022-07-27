@@ -1,5 +1,4 @@
 use super::*;
-use toml;
 
 /// TomlAdapter map a Toml file in a linear multilevel key/value array
 ///

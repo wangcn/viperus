@@ -60,9 +60,10 @@ pub enum ViperusError {
 }
 impl Error for ViperusError {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        match &self {
-            _ => None,
-        }
+        None
+        // match &self {
+        //     _ => None,
+        // }
     }
 }
 impl Display for ViperusError {
@@ -193,7 +194,7 @@ impl<'v> Viperus<'v> {
             if std::path::Path::new(name).exists() {
                 debug!("reloading  {} => {:?}", name, format);
 
-                self.load_file(name, format.clone())?;
+                self.load_file(name, *format)?;
             } else {
                 debug!("not exists  {} => {:?}", name, format);
             }
