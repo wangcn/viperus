@@ -1,8 +1,8 @@
 [package]
 name = "viperus"
-version = "0.1.11"
+version = "0.1.12"
 authors = ["mauro cordioli <coma@cordioli.it>"]
-edition = "2018"
+edition = "2021"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/maurocordioli/viperus"
 description="Viperus is an  (in)complete configuration solution for rust applications heavly inspired by the GO package Viper.It supports defaults reading from JSON, TOML, YAML, envfile,java properties, environment variables reading from Clap command line flags setting explicit values"

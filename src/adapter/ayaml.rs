@@ -1,5 +1,4 @@
 use super::*;
-use serde_yaml;
 
 /// YamlAdapter map a Yaml file in a linear multilevel key/value array
 ///
@@ -50,7 +49,7 @@ impl ConfigAdapter for YamlAdapter {
             if let serde_yaml::Value::String(s) = k {
                 let kpath = s.to_owned();
 
-                rec_yaml(&mut res, &kpath, &v);
+                rec_yaml(&mut res, &kpath, v);
             }
         }
 
